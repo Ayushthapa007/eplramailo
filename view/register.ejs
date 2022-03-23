@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPL RAMAILO GROUP</title>
+
+    <style>
+.container {
+background-color: antiquewhite;
+min-height: 500px;
+max-width: 80%;
+border:1px solid rgb(158, 124, 124);
+margin:auto;
+padding:0px;
+overflow: hidden;
+
+}
+.description {
+    width:100%;
+    min-height: 100px;
+    color:white;
+    background-color: blue;
+    text-align: center;
+    font-size: 25px;
+    margin-top: -25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+
+}
+.description p {
+   padding-top: 30px;
+}
+
+.form {
+    margin-top: 50px;
+    font-size: 25px;
+    text-align: center;
+}
+
+input {
+    width:300px;
+    height:35px;
+    margin:20px;
+}
+.butt {
+    max-width:300px;
+    background-color: blueviolet;
+    height:35px;
+    color:white;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+        width: 100%;
+    }
+    .description {
+        font-size: 14px;
+    }
+
+    input {
+    width:230px;
+  
+}
+
+  
+}
+.error {
+    background-color: yellow;
+    height:50px;
+    width:100%;
+    z-index: 99;
+}
+    </style>
+</head>
+<body>
+
+<section class='container'>
+<div class="description">
+<p>This registration form is for members of EPL-RAMAILO GROUP. Plese provide your true information. Thank You!!</p>
+
+</div>
+
+<div class='form'>
+    <% if (error) { %>
+        <div class="error">
+            <%=error %>
+        </div>
+        <% } %>
+    
+<form action='/register' method=post>
+    <input type='text' placeholder="First Name" name='fname' required/>
+    <input type='text' placeholder="Last Name" name='lname' required/><br/>
+    <input type='email' placeholder="E-mail" name='email' required/>
+    <input type='text' placeholder="Phone" name='phone'/><br/>
+    <input type='submit' value='Register'class="butt" />
+</form>
+
+</div>
+</section>
+<a href="/">Home Page</a>
+    
+</body>
+</html>

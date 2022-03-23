@@ -1,0 +1,254 @@
+body {
+    padding:0px;
+    margin:0px;
+    overflow-x: hidden;
+   
+   }
+
+.top {
+   width:100%;
+   height:35px;
+   background-color: black;
+}
+.top h1 {
+   margin:0px;
+   padding:0px;
+   color:rgb(96, 87, 146);
+   position: absolute;
+   top:5px;
+   left:10px;
+   font-size: 18px;
+}
+.top span {
+   float:right;
+   position: relative;
+   color:white;
+   font-size: 25px;
+   right:10px;
+}
+.main-body {
+   width:100%;
+   min-height: 600px;
+   background-color: rgb(241, 248, 248);
+}
+.left {
+   background-color: aqua;
+   width: 20%;
+   min-height:600px;
+   position:absolute;
+   float:left;
+
+}
+.right {
+   background-color: rgb(255, 255, 255);
+   width: 80%;
+   min-height:600px;
+   position: relative;
+   float: right;
+}
+.admin-profile {
+   width:100%;
+   height:100px;
+   color:rgb(142, 125, 158);
+}
+.photo {
+width:40%;
+height:80%;
+position:absolute;
+float:left;
+
+}
+.photo span {
+   font-size: 80px;
+}
+.name {
+width:60%;
+height:80%;
+position: relative;;
+float:right; 
+}
+.name h3 {
+   padding:5px;
+   margin:5px;
+   font-size: 25px;
+}
+.name h4 {
+   padding:0px;
+   margin:0px;
+}
+.dash {
+   width:100%;
+   height:40px;
+   background-color: blue;
+   font-size: 20px;
+   
+}
+.dash span {
+   position: relative;
+   top:5px;
+   left:14px;
+   color:white;
+}
+.dashboard {
+   width:100%;
+   height:60px;
+   background-color: brown;
+   color:white;
+   display: inline-flex;
+}
+.toggler {
+padding:0px;
+width:100px;
+height:60px;
+display: none;
+
+}
+.toggler p {
+font-size: 35px;
+margin:0px;
+padding:5px;
+cursor: pointer;
+}
+.dash-board {
+width:200px;
+height:60px;
+}
+.dash-board p {
+   font-size: 30px;  
+   margin:0px;
+   padding:10px;
+}
+.search {
+   width:100%;
+   min-height:100px;
+   background-color: cadetblue;
+}
+.subscribers {
+   width:30%;
+   height:100px;
+   position:absolute;
+   float:left;
+   margin-left: 30px;
+}
+.subscribers h1 {
+   font-size: 50px;
+   margin:0px;
+   padding: 0px;
+}
+.search-bar {
+   width:70%;
+   height:100px;
+   position: relative;
+   float:right;
+   text-align: center;
+}
+.search-here {
+   height: 35px;
+   width: 250px;
+ margin-top: 30px;
+}
+.menu-list ul {
+list-style: none;
+margin:0px;
+padding:0px;
+}
+.menu-list ul li {
+   display:block;
+   margin:0px;
+   padding:15px;
+   font-size: 18px;
+   font-weight: bold;
+   cursor: pointer;
+}
+.menu-list ul li:hover {
+   background-color: darkblue;
+}
+.traffic {
+width:100%;
+min-height:200px;
+background-color: wheat;
+}
+.traffic div {
+   width:30%;
+   height:150px;
+   background-color: whitesmoke;
+   display:inline-block;
+   margin-left: 1.93%;
+   margin-top: 20px;
+}
+.traffic div h2,h3 {
+   font-size: 25px;
+   margin-left:20px;
+}
+.search-button {
+   height:35px;
+}
+.search-result {
+   width:250px;
+   height:250px;
+   background-color: yellow;
+   position:absolute;
+   margin-left: 30%;
+   display:none;
+}
+
+
+@media screen and (max-width: 850px) {
+.toggler {
+   display:block;
+}
+.left-side {
+   display:none;
+}
+.display {
+   display:block;
+   width: 250px;
+   z-index: 99;
+   margin-top: 60px;
+}
+.right {
+   width: 100%;
+}
+
+}
+@media screen and (max-width: 550px) {
+   .search {
+   width:100%;
+   min-height:200px;
+   background-color: cadetblue;
+}
+.search-here {
+   width:150px;
+}
+.search-result {
+   width:200px;
+   margin-left: 20%;
+}
+
+   .subscribers {
+   width:100%;
+   height:100px;
+    position: relative;
+   margin-left: 30px;
+}
+
+.search-bar {
+   width:100%;
+   height:100px;
+   text-align: center;
+}
+.traffic div {
+   width:100%;
+   height:150px;
+   background-color: whitesmoke;
+   display:block;
+}
+
+}
+
+.football {
+   width:200px;
+   height:300px;
+   background-color: green;
+   margin-left: 5%;
+}

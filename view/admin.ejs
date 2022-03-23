@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='admin.css'/>
+    <title>Admin</title>
+<style>
+
+</style>
+</head>
+<body>
+    
+<section class="top">
+    <h1>EPL-RAMAILO</h1>
+    <span>&#9993;</span>
+   
+</section>
+<section class='main-body'>
+    <section class='left left-side'>
+        <div class="admin-profile">
+        <div class='photo'>
+       <span>&#9786;</span>
+        </div>
+        <div class='name'>
+            <h3>Admin</h3>
+            <h4>Ayush Thapa</h4>
+
+        </div>
+        </div>
+
+<div class='dash'>
+<span>&#9729;  Dashboard</span>
+
+</div>
+<div class='menu-list'>
+    <ul>
+        <li>&#9762;Live Football
+            <div class='football'>
+                
+            </div>
+        </li>
+        <li>&#9775; Live Cricket</li>
+        <li> &#9997;Mail User</li>
+        <li>&#9993; Mail All</li>
+        <li>&#9741;Log Out</li>
+    </ul>
+
+</div>
+
+
+    </section>
+
+
+
+<section class='right'>
+  
+<div class='dashboard'>
+    <div class="toggler" onclick="fun()">
+        <p>&#9776;</p>
+    </div>
+  <div class='dash-board'>
+  <p><b>Dashboard</b></p>
+  </div>
+</div>
+<div class='search'>
+    <div class='subscribers'>
+        <h1><%=subs%></h1>
+        <p>Subscribers</p>
+    </div>
+    <div class='search-bar'>
+        <form method='POST' action='/admin'>
+        <input type='search' name='sear' placeholder="Search Users" class="search-here" />
+        <button class="search-button" >Search</button>
+        </form>
+        <button onclick='showResult()' class='show-result'>Show Result</button>
+        <div class="search-result">
+<h2>Search result</h2>
+<% if (res != null) { %>
+<p><%=res.firstname%> <%=res.lastname %></p>
+<p><%=res.mail%></p> 
+<p><%=res.phoneno%></p> 
+<% } %>
+  
+        </div>
+    </div>
+
+</div>
+
+<div class='traffic'>
+    <div class="total" >
+     <h2>50,00,00,00</h2>
+     <h3>Total Traffic</h3> 
+    </div>
+    <div class="monthely">
+        <h2>50,00,00</h2>
+        <h3>Monthely Traffic</h3> 
+    </div>
+    <div class='weekly'>
+        <h2>50,000</h2>
+     <h3>Weekly Traffic</h3> 
+    </div>
+
+</div>
+
+
+</section>
+
+</section>
+
+
+<script>
+var count=0;
+
+function fun() {
+    var x=document.querySelector('.left-side');
+    x.classList.toggle('display');
+    console.log('logged')
+}
+
+
+function showResult() {
+    let x=document.querySelector('.search-result');
+    if(count%2==0) {
+    x.style.display='block';
+    document.querySelector('.show-result').innerText="Hide Result";
+    }else {
+        x.style.display='none';
+        document.querySelector('.show-result').innerText="Show Result";
+    }
+count=count+1;
+console.log(count);
+}
+</script>
+
+</body>
+</html>
